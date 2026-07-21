@@ -1,0 +1,12 @@
+/* Shared visual utilities for BlockNest — kept separate from globals.css
+   so theme-level tweaks (Phase 4 dark mode etc.) stay in one place. */
+
+.world-grid {
+  background-image: radial-gradient(rgba(3, 83, 82, 0.14) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.card-surface {
+  background-color: #FFF8DD;
+  border: 1px solid rgba(3, 83, 82, 0.15);
+}
