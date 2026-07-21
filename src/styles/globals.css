@@ -2,19 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Global scrolling */
 html {
   scroll-behavior: smooth;
 }
 
+/* Global body styles */
 body {
   @apply bg-nest-bg text-nest-ink font-body antialiased;
 }
 
-h1, h2, h3, .font-display {
-  @apply font-display;
+/* Display typography */
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
 }
 
-/* Visible keyboard focus everywhere — accessibility floor */
+.font-display {
+  font-family: "Playfair Display", serif;
+}
+
+/* Visible keyboard focus — accessibility */
 :focus-visible {
   outline: 2px solid #035352;
   outline-offset: 3px;
@@ -23,7 +33,9 @@ h1, h2, h3, .font-display {
 
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -31,6 +43,7 @@ h1, h2, h3, .font-display {
   }
 }
 
+/* Text selection */
 ::selection {
   background: #035352;
   color: #FFF8DD;
